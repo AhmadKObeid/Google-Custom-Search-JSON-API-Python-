@@ -79,11 +79,11 @@ def main():
     
     #reading arguments from console
     arguments = read_arguments()
-    #setting constatnt values
+    #getting api key and search engine id values
     api_key, engine_id = get_config('config.json')
     # get search query from arguments
     query = get_query(arguments);
-    # pass query to search api and get results
+    # pass api details to get search results
     results = search_api(api_key, engine_id, query)
     # write results to a file
     write_data_to_file('results.txt', results)
